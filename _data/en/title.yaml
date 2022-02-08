@@ -1,0 +1,8 @@
+name: "Leonid Zhizhin"
+short-name: "Lyonya"
+about: "Economist, writing in Python, R and Stata. Experienced Linux user. Last couple of years, I've been conducting quasi-experimental researches, including data collection and processing, hypothesis testing and presentation of results. I like learning new technology and to uncover the internal mechanism of various processes. I am primarily interested in a strong team, working on complex, skill-intensive tasks."
+sections:
+  whoami: "$ whoami"
+  jobs: "work experience"
+  education: "education"
+  publications: "publications"

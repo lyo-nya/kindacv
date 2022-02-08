@@ -1,0 +1,43 @@
+---
+- year: 2020
+  authors: 
+    - name: K. Runova
+      link: https://eusp.org/en/people/kseniya-runova
+    - name: L. Zhizhin
+  title: 
+    name: Как осужденные в колониях далеко от дома теряют связь с семьей и шанс на возвращение в общество
+    link: "https://takiedela.ru/news/2020/10/13/nakazanie-i-podderzhka/"
+
+- year: 2021
+  authors:
+    - name: K. Runova
+      link: https://eusp.org/en/people/kseniya-runova
+    - name: D. Skougarevskiy
+      link: https://eusp.org/en/people/skugarevskij-dmitrij-anatolevich
+    - name: L. Zhizhin
+  title: 
+    name: "Prisoner Social Ties, Money Transfers, and Sender-recipient Distance: Evidence from Russia"
+    link: "http://dx.doi.org/10.2139/ssrn.3806597"
+
+- year: 2021
+  authors: 
+    - name: K. Runova
+      link: https://eusp.org/en/people/kseniya-runova
+    - name: D. Skougarevskiy
+      link: https://eusp.org/en/people/skugarevskij-dmitrij-anatolevich
+    - name: L. Zhizhin
+  title: 
+    name: Аналитическая записка «Тюремная география, денежные переводы и социальные связи заключенных»
+    link: "https://enforce.spb.ru/images/prison_sender-recipient_distance_online.pdf"
+
+- year: Forthcoming
+  authors:
+    - name: L. Zhizhin
+    - name: A. Knorre 
+      link: https://alexknorre.com/
+    - name: R. Kuchakov
+      link: https://eusp.org/en/people/ruslan-kuchakov
+    - name: D. Skougarevskiy
+      link: https://eusp.org/en/people/skugarevskij-dmitrij-anatolevich
+  title: 
+    name: "Издержки общества от преступности: измерение с помощью порога готовности платить"

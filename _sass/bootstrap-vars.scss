@@ -1,0 +1,51 @@
+// Basic
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Comfortaa&family=Forum&family=Play:wght@700&family=Roboto+Mono&display=swap");
+$font-family-monospace: "Play", monospace;
+
+$font-size-root: calc(max(0.06vmax + 1.5vmin, 8.5px, 1.2vh));
+
+// Container
+@mixin make-container($padding-x: $container-padding-x) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.custom-container {
+  @include make-container($padding-x: 0);
+}
+
+//// Accordion
+// No decorations on accordion buttons
+$collapse-animation-time: 0.35s;
+$accordion-border-width: 0;
+$btn-focus-box-shadow: none;
+// Change direction of icon rotation
+$accordion-icon-transform: rotate(180deg);
+$accordion-button-icon: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/></svg>');
+$accordion-button-active-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"> <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/></svg>');
+$transition-collapse: height $collapse-animation-time ease-out;
+$accordion-icon-width: 2.5rem;
+
+.accordion-item {
+  transition: height $collapse-animation-time ease-in;
+}
+
+// Carousel
+$carousel-control-width: 10%;
+$carousel-control-opacity: 0.15;
+$carousel-indicator-width: 5%;
+$carousel-indicator-height: 3px;
+$carousel-indicator-spacer: 8px;
+$carousel-indicator-opacity: 0.15;
+$carousel-control-icon-width: 5rem;
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#fff'><path d='M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z'/></svg>");
+$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#fff'><path d='M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z'/></svg>");
+$carousel-transition-duration: 0.5s;
+
+// Card
+$card-border-width: 0;
+$card-inner-border-radius: 0;
+$card-border-radius: 0;

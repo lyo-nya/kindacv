@@ -1,0 +1,8 @@
+{% if site.data[page.lang].education %}
+<!---->
+{% assign items = site.data[page.lang].education %}
+<!---->
+{% include elements/carousel.html id="educ" items=items title_var="major"
+org_var="university" time_var="period" paragraph_var="description" %}
+<!---->
+{% endif %}

@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Comfortaa:wght@300&family=IBM+Plex+Sans&family=Play&display=swap");
+
+@page {
+  size: A4;
+}
+
+@media print {
+  :root {
+    font-size: 10px;
+  }
+  body {
+    width: 17.78cm;
+    height: 24.13cm;
+  }
+}
+
+@media screen {
+  :root {
+    font-size: 0.9vmax;
+  }
+  body {
+    width: 50vw;
+  }
+  @media (max-width: 1200px) {
+    body {
+      width: 85vw;
+    }
+  }
+}
+
+body {
+  margin: 0 auto;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+}
+
+#whoami {
+  display: grid;
+  grid-template-areas: "about contacts";
+}
+
+.section-item {
+  page-break-inside: avoid;
+  display: grid;
+  grid-row-gap: 0.2rem;
+  border-top: 0.1rem dashed #bbbbbb;
+  grid-template-columns: 15% 85%;
+  grid-template-areas:
+    "time title"
+    "time org"
+    "time paragraph"
+    "time people";
+}
+
+.section-title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: "Play", sans-serif;
+}
+
+.title {
+  margin-top: 0.2rem;
+  grid-area: title;
+  font-size: 1.1rem;
+}
+
+.org {
+  grid-area: org;
+  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
+  font-family: "Comfortaa", cursive;
+}
+.time {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  color: #303030;
+  font-size: 0.8rem;
+  font-family: "Anonymous Pro", monospace;
+  grid-area: time;
+}
+.people {
+  grid-area: people;
+  margin-bottom: 0.2rem;
+}
+.about {
+  grid-area: about;
+}
+.contacts {
+  font-size: 1.3rem;
+  grid-area: contacts;
+}
+.paragraph {
+  grid-area: paragraph;
+  ul {
+    margin: 0 1.5rem;
+    padding: 0;
+  }
+}

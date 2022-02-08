@@ -1,0 +1,8 @@
+{% if site.data[page.lang].publications %}
+<!---->
+{% assign pubs = site.data[page.lang].publications %}
+<!---->
+{% include elements/carousel.html id="pubs" items=pubs title_var="title"
+time_var="year" people_var="authors" %}
+<!---->
+{% endif %}

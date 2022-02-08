@@ -1,0 +1,22 @@
+<div class="accordion-item" id="{{include.id}}">
+  <h2 class="accordion-header" id="{{include.id}}-header">
+    <button
+      class="fs-2 ps-3 fw-bold h-100 font-monospace accordion-button {% if include.id != 'whoami' %}text-uppercase collapsed {% else %}blinking-cursor{% endif %}"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#{{include.id}}-collapse"
+      aria-expanded="{% if include.id == 'whoami' %}true{% else %}false{% endif %}"
+      aria-controls="{{include.id}}-collapse"
+    >
+      <span>{{include.header}}</span>
+    </button>
+  </h2>
+  <div
+    id="{{include.id}}-collapse"
+    class="accordion-collapse collapse h-100 {% if include.id == 'whoami' %}show{% endif %}"
+    aria-labelledby="{{include.id}}-heading"
+    data-bs-parent="#main"
+  >
+    <div class="accordion-body mx-auto">{% include {{include.id}}.html %}</div>
+  </div>
+</div>

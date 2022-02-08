@@ -1,0 +1,113 @@
+* {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+html {
+  height: 100%;
+}
+
+// Set colors for sections
+$bg-colors: (
+  "#whoami": #a64ac9,
+  "#jobs": #f76c6c,
+  "#education": #fccd04,
+  "#publications": #a8d0e6,
+);
+
+@each $section, $color in $bg-colors {
+  #{$section} {
+    h2 {
+      button {
+        color: #303030;
+        background: $color;
+      }
+    }
+    background: $color;
+  }
+}
+
+
+// Responsive card size
+$card-width: 78vw;
+.card {
+  max-width: $card-width;
+  max-height: $card-width * 1.4;
+}
+
+@media (min-width: 1300px) {
+  $card-height: 50vmin;
+  .card {
+    max-width: $card-height * 1.4;
+    max-height: $card-height;
+  }
+}
+
+// Fonts
+.org {
+  font-family: "Comfortaa", cursive;
+}
+.time {
+  font-family: "Anonymous Pro", monospace;
+}
+
+
+// Sizes
+.accordion-body {
+  height: 85%;
+}
+
+.accordion-item {
+  height: 6%;
+}
+
+#whoami {
+  height: 82%;
+}
+
+
+.accordion-button {
+  margin: 0;
+  padding: 0;
+}
+
+
+// Couldn't figure out, how to set list-style
+li:before {
+  content: "•  ";
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+// Blinking cursor after whoami command
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+.blinking-cursor {
+  span::after {
+    content: "I";
+    color: black;
+    font-size: $h2-font-size;
+  }
+}
+
+.blinking-cursor {
+  span::after {
+    animation: cursor-blink 1.2s steps(2) infinite;
+  }
+}
+
+// .card-text {
+//     font-family: "Roboto Mono", sans-serif;
+// }

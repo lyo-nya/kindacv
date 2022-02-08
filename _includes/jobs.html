@@ -1,0 +1,9 @@
+{% if site.data[page.lang].jobs %}
+<!---->
+{% assign jobs = site.data[page.lang].jobs %}
+<!---->
+{% include elements/carousel.html id="jobs" items=jobs title_var="position"
+org_var="organization" time_var="period" people_var="supervisors"
+enumeration_var="details" %}
+<!---->
+{% endif %}

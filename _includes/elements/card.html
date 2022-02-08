@@ -1,0 +1,60 @@
+<div class="card h-100 w-auto py-5 px-5 top-50 start-50 translate-middle">
+  <div clas="card-body">
+    <h5
+      class="fw-bold {% if include.id == 'whoami' %}fs-2 mt-3 text-center{%else %}fs-3{% endif %} card-title mb-1 pb-1"
+    >
+      {% if include.title.link %}
+      <a href="{{include.title.link}}">{{include.title.name}}</a>
+      {% else %}{{ include.title.name }}{% endif %}
+    </h5>
+    {{include.content}}
+    <!---->
+    {% if include.org%}
+    <h6 class="fs-5 org">
+      {% if include.id == 'educ-carousel' %}{{include.level }} @ {% endif %}{{
+      include.org }}
+    </h6>
+    {% endif %}
+    <!---->
+    {% if include.time%}
+    <h6 class="fs-5 fw-regular time text-muted mb-3 pb-1">{{ include.time }}</h6>
+    {% endif %}
+    <!---->
+    {% if include.people %}
+    <h6 class="fs-6 people position-absolute bottom-0 mb-5 pb-1">
+      {% capture people_element %}{% endcapture %}
+      {% for person in include.people %}
+        <!---->
+        {% if person.title %}
+          <!---->
+          {% capture person_string %}{{person.title}}: {{person.name}}{%endcapture%}
+        <!---->
+        {% else %}
+          <!---->
+          {% capture person_string %}{{person.name}}{%endcapture%}
+        <!---->
+        {% endif %}
+        <!---->
+        {% if person.link %}
+          {% capture person_string %}<a href="{{person.link}}">{{person_string}}</a>{% endcapture %}
+        {% endif %}
+        {% capture people_element %}{% if people_element != "" %}{{people_element}}, {% endif %}{{person_string}}{% endcapture %}
+      {% endfor %}
+      {{ people_element }}
+    </h6>
+    {% endif %}
+    <!---->
+    {% if include.paragraph != ""%}
+    <!-- <hr> -->
+      <p class="card-text lh-sm fs-5">{{ include.paragraph }}</p>
+    {% endif %}
+    <!---->
+    {% if include.enumeration | length > 0 %}
+    <ul class="fs-5 list-unstyled ">
+      {% for item in include.enumeration %}
+      <li>{{item}}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</div>

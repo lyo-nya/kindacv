@@ -1,0 +1,14 @@
+<div class="custom-container h-100">
+  <div class="accordion accordion-flush h-100" id="main">
+    <!---->
+    {% for section in site.data[page.lang].title.sections %}
+    <!---->
+    {% capture id %}{{section[0]}}{% endcapture %}
+    <!---->
+    {% capture header %}{{section[1]}}{% endcapture %}
+    <!---->
+    {% include elements/accordion_item.html id=id header=header %}
+    <!---->
+    {% endfor %}
+  </div>
+</div>

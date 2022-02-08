@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="{{'/assets/css/print.css' | prepend: site.baseurl}}"
+    />
+    <script
+      src="https://kit.fontawesome.com/923b056737.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id={{site.ga-id}}"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "{{site.ga-id}}");
+    </script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{'/favicon.png' | prepend: site.baseurl}}"
+    />
+    <title>{{site.title}}</title>
+  </head>
+  {% assign data = site.data[page.lang] %}
+  <body>
+    <h1>{{data.title.name}}</h1>
+    <div id="whoami">
+      <ul class="contacts fa-ul">
+        <li id="tg">
+          <i class="fab fa-telegram"></i>
+          t.me/{{site.data.contacts.tg-username}}
+        </li>
+        <li id="gh">
+          <i class="fab fa-github"></i>
+          github.com/{{site.data.contacts.github-username}}
+        </li>
+        <li id="email">
+          <i class="fas fa-at"></i> {{site.data.contacts.email}}
+        </li>
+      </ul>
+      <p class="about">{{data.title.about}}</p>
+    </div>
+    <!-- Work experience -->
+    <div class="section">
+      <h2 class="section-title">{{data.title.sections.jobs}}</h2>
+      <div class="section-body">
+        {% for row in data.jobs %}
+        <div class="section-item" id="jobs">
+          <span class="title">{{row.position.name}}</span>
+          {% capture start %}{{row.period.start | replace: " ", "&nbsp"}}{%
+          endcapture %}
+          <!---->
+          {% capture end %}{{row.period.end | replace: " ", "&nbsp"}}{%
+          endcapture %}
+          <span class="time">{{start}}<br />-<br />{{end}}</span>
+          <span class="org">{{row.organization}}</span>
+          {% if row.details.size > 0 %}
+          <div class="paragraph">
+            <ul>
+              {% for item in row.details %}
+              <li>{{item}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+          <span class="people">
+            <!---->
+            {% for person in row.supervisors %}
+              {{person.title}}: {{person.name}}
+            {% endfor %}
+            <!---->
+          </span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- Education -->
+    <div class="section">
+      <h2 class="section-title">{{data.title.sections.education}}</h2>
+      <div class="section-body">
+        {% for row in data.education %}
+        <div class="section-item" id="education">
+          <span class="title">{{row.major.name}}</span>
+          {% capture start %}{{row.period.start | replace: " ", "&nbsp"}}{%
+          endcapture %}
+          <!---->
+          {% capture end %}{{row.period.end | replace: " ", "&nbsp"}}{%
+          endcapture %}
+          <span class="time">{{start}}<br />-<br />{{end}}</span>
+          <span class="org">{{row.level}} @ {{row.university}}</span>
+          <div class="paragraph">{{row.description}}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- Publications -->
+    <div class="section">
+      <h2 class="section-title">{{data.title.sections.publications}}</h2>
+      <div class="section-body">
+        {% for row in data.publications %}
+        <div class="section-item" id="education">
+          <span class="title">{{row.title.name}}</span>
+          <span class="org">{{row.title.link}}</span>
+          <span class="time">{{row.year}}</span>
+          {% capture authors %}{% endcapture %}
+          {% for author in row.authors %}
+            {% capture authors %}{% if authors != ""%}{{authors}}, {% endif %}{{author.name}} {% endcapture %}
+          {% endfor %}
+          <span class="people">{{authors}}</span>
+
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

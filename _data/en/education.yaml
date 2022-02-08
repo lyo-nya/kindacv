@@ -1,0 +1,36 @@
+---
+- university: HSE SPb 
+  major: 
+    name: Economics
+  level: Undergraduate Program
+  period:
+    start: 2015 
+    end: 2019
+  description: "
+    Mostly done urban economics.
+    Wrote thesis on «Urban Structure Model with Endogenous Flows of Firms and Population»,
+    where I proposed to describe city formation process with reaction-diffusion system
+    of differential equations.
+    "
+
+- university: HSE SPb
+  major: 
+    name: Python programming for data analysis
+  level: Refresher course
+  period:
+    start: 17.11.2018
+    end: 10.12.2018
+
+# - university: ITMO
+#   major: Programming and Artificial Intelligence
+#   level: Master's Program
+#   period:
+#     start: September 2019
+#     end: December 2019
+
+# - university: HSE SPb 
+#   major: Applied Economics and Mathematical Methods
+#   level: Master's Program
+#   period:
+#     start: September 2020
+#     end: December 2021

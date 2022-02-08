@@ -1,0 +1,36 @@
+domain: lyo-nya.github.io       
+url: https://lyo-nya.github.io
+baseurl: /kindacv   
+title: "me am Lyonya"
+ga-id: G-7FVTBCVESV
+defaults:
+  -
+    scope: 
+      path: ""
+    values:
+      layout: "fancy"
+      lang: "ru"
+  -
+    scope:
+      path: "ru"
+    values:
+      layout: "fancy"
+      lang: "ru"
+  -
+    scope:
+      path: "en"
+    values:
+      layout: "fancy"
+      lang: "en"
+  -
+    scope: 
+      path: "ru/print.md"
+    values:
+      layout: "print"
+      lang: "ru"
+  -
+    scope:
+      path: "en/print.md"
+    values:
+      layout: "print"
+      lang: "en"
