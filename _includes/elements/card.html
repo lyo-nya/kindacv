@@ -19,9 +19,26 @@
     {% if include.time%}
     <h6 class="fs-5 fw-regular time text-muted mb-3 pb-1">{{ include.time }}</h6>
     {% endif %}
+    {% if include.paragraph != ""%}
+    <!-- <hr> -->
+      <p class="card-text lh-sm fs-5">{{ include.paragraph }}</p>
+    {% endif %}
+    <!---->
+    {% if include.enumeration | length > 0 %}
+    <ul class="fs-5 list-unstyled ">
+      {% for item in include.enumeration %}
+      <li>{{item}}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <h6>
+    {% for skill in include.skills %}
+      <span class="badge bg-secondary">{{skill}}</span>
+    {% endfor %}
+    </h6>
     <!---->
     {% if include.people %}
-    <h6 class="fs-6 people position-absolute bottom-0 mb-5 pb-1">
+    <h6 class="fs-6 people position-absolute bottom-0 mb-3 pb-1">
       {% capture people_element %}{% endcapture %}
       {% for person in include.people %}
         <!---->
@@ -44,17 +61,5 @@
     </h6>
     {% endif %}
     <!---->
-    {% if include.paragraph != ""%}
-    <!-- <hr> -->
-      <p class="card-text lh-sm fs-5">{{ include.paragraph }}</p>
-    {% endif %}
-    <!---->
-    {% if include.enumeration | length > 0 %}
-    <ul class="fs-5 list-unstyled ">
-      {% for item in include.enumeration %}
-      <li>{{item}}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
   </div>
 </div>

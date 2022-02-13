@@ -16,6 +16,25 @@
     - Написание академических, аналитических и популярных текстов текстов
     - Участвовал в реализации 6 проектов
     - Подготовил более 8 оригинальных наборов данных
+  skills:
+    - R
+    - Python
+    - Stata
+    - git
+    - SQL
+    - LaTeX
+    - Linux
+    - aws (yc)
+    - data.table
+    - pandas
+    - seaborn
+    - matplotlib
+    - graphviz
+    - dash
+    - plotly
+    - numpy
+    - sklearn
+    - sqlalchemy
 
 - period:
     start: Октябрь 2020 
@@ -31,6 +50,14 @@
     - Проведение семинаров
     - Основы эконометрики временных рядов (70 %)
     - Основы машинного обучения (30 %)
+  skills:
+    - Python
+    - pandas
+    - matplotlib
+    - numpy
+    - sklearn
+    - Jupyter Notebook
+    - TLJH
 
 - period:
     start: Сентябрь 2020
@@ -49,6 +76,15 @@
     - Микроэкономика (50 %)
     - Оценка спроса на непрерывном множестве товаров (20 %)
     - Модели дискретного выбора (30 %)
+  skills:
+    - R
+    - data.table
+    - mlogit
+    - Python
+    - pandas
+    - statsmodels
+    - Jupyter Notebook
+    - TLJH
 
 - period:
     start: Апрель 2019
@@ -62,6 +98,11 @@
   details:
     - Участие в разработке модели оттока клиентов
     - В основном дескриптивный анализ и брейнсторм
+  skills:
+    - SQL
+    - Python
+    - pandas
+    - Jupyter Notebook
 
 - period:
     start: Январь 2018
@@ -76,6 +117,9 @@
   details:
     - Подготовка и оценивание проверочных работ 
     - Проведение консультаций для студентов
+  skills:
+    - Stata
+    - LaTeX
 
 - period:
     start: Сентябрь 2016
@@ -89,3 +133,7 @@
   details:
     - Подготовка и оценивание проверочных работ 
     - Проведение консультаций для студентов
+  skills:
+    - LaTeX
+    - Mathcad
+    - Maple

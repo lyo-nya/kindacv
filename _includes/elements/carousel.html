@@ -56,11 +56,12 @@
       {% capture paragraph %}{{item[include.paragraph_var]}}{% endcapture %}
       <!---->
       {% assign enumeration = {{item[include.enumeration_var]}} %}
+      {% assign skills = {{item.skills}} %}
       <!---->
       {% capture level %}{{item.level}}{% endcapture %}
       <!---->
       {% include elements/card.html title=title org=org time=time people=people
-      paragraph=paragraph id=main_id level=level enumeration=enumeration %}
+      paragraph=paragraph id=main_id level=level enumeration=enumeration skills=skills%}
     </div>
     {% endfor %}
   </div>

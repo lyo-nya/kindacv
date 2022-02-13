@@ -16,6 +16,25 @@
     - Academic, analytic and popular text writing
     - Took part in 6 projects
     - Prepared more that 8 original data sets
+  skills:
+    - R
+    - Python
+    - Stata
+    - git
+    - SQL
+    - LaTeX
+    - Linux
+    - aws (yc)
+    - data.table
+    - pandas
+    - seaborn
+    - matplotlib
+    - graphviz
+    - dash
+    - plotly
+    - numpy
+    - sklearn
+    - sqlalchemy
 
 - period:
     start: October 2020
@@ -31,6 +50,14 @@
     - Teaching seminars
     - Intro to time series econometrics (70%)
     - Intro to machine learning (30%)
+  skills:
+    - Python
+    - pandas
+    - matplotlib
+    - numpy
+    - sklearn
+    - Jupyter Notebook
+    - TLJH
 
 - period: 
     start: September 2020 
@@ -49,6 +76,15 @@
     - Microeconomics (50%)
     - Demand estimation on continuous choice set (20%)
     - Discrete choice models (30%)
+  skills:
+    - R
+    - data.table
+    - mlogit
+    - Python
+    - pandas
+    - statsmodels
+    - Jupyter Notebook
+    - TLJH
 
 - period: 
     start: April 2019
@@ -62,6 +98,11 @@
   details:
     - Took part in development on churn prediction model
     - Mostly did explanatory analysis and brainstorm
+  skills:
+    - SQL
+    - Python
+    - pandas
+    - Jupyter Notebook
 
 - period: 
     start: January 2018 
@@ -73,6 +114,9 @@
     - title: Supervisor
       name: D. Pokrovskiy
       link: https://www.hse.ru/en/org/persons/202887
+  skills:
+    - Stata
+    - LaTeX
 
 - period:
     start: September 2016 
@@ -83,3 +127,7 @@
   supervisors: 
     - title: Supervisor
       name: N. Smirnova
+  skills:
+    - LaTeX
+    - Mathcad
+    - Maple

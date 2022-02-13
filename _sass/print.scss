@@ -4,12 +4,16 @@
   size: A4;
 }
 
+body {
+  -webkit-print-color-adjust: exact !important;
+}
+
 @media print {
   :root {
-    font-size: 9.2px;
+    font-size: 8px;
   }
   body {
-    width: 17.78cm;
+    width: 13cm;
     height: 24.13cm;
   }
 }
@@ -53,7 +57,8 @@ h1 {
     "time title"
     "time org"
     "time paragraph"
-    "time people";
+    "time people"
+    "time skills";
 }
 
 .section-title {
@@ -99,5 +104,18 @@ h1 {
   ul {
     margin: 0 1.5rem;
     padding: 0;
+  }
+}
+
+.skills {
+  grid-area: skills;
+  padding: 0;
+  margin: 0 0 .5rem 0;
+  li {
+    display: inline-block;
+    margin: .1rem;
+    border-radius: .1rem;
+    padding: .2rem;
+    background-color: #eeeeee;
   }
 }
